@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2026 at 06:15 PM
+-- Generation Time: Jan 06, 2026 at 02:49 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_iscstudentorganizationrecords`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_admin`
+--
+
+CREATE TABLE `tbl_admin` (
+  `adID` int(11) NOT NULL,
+  `adFname` varchar(30) NOT NULL,
+  `adLname` varchar(20) NOT NULL,
+  `adMname` varchar(20) DEFAULT NULL,
+  `adSuffix` varchar(20) DEFAULT NULL,
+  `adSalutations` varchar(20) NOT NULL,
+  `adPronouns` varchar(20) NOT NULL,
+  `adBirthDate` date NOT NULL,
+  `adDepartment` varchar(100) NOT NULL,
+  `adSection` varchar(20) NOT NULL,
+  `adInstitution` varchar(100) NOT NULL,
+  `adMobileNo` int(11) NOT NULL,
+  `adEmail` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -156,6 +178,12 @@ CREATE TABLE `tbl_newsletter` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tbl_admin`
+--
+ALTER TABLE `tbl_admin`
+  ADD PRIMARY KEY (`adID`);
 
 --
 -- Indexes for table `tbl_applications`
